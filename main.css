@@ -1,0 +1,360 @@
+/* Обнуление CSS браузера */
+html {
+  box-sizing: border-box;
+}
+
+img {
+  display: block;
+  max-width: 100%;
+}
+
+*,
+*::before,
+*::after {
+  box-sizing: inherit;
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+p {
+  margin: 0;
+  padding: 0;
+}
+
+/* Задаем основные шрифты и так же обнуляем margin */
+
+body {
+  margin: 0;
+  font-family: "Oswald", sans-serif;
+  font-weight: 400;
+}
+.container {
+  max-width: 1920px;
+  margin: 0 auto;
+}
+a {
+  text-decoration: none;
+}
+
+/* HEADER */
+
+header {
+  background-image: url(/img/header__bg.png);
+}
+.header__container {
+  align-items: center;
+  height: 700px;
+  background-image: url(/img/header__bg__content.png);
+  background-position: center;
+}
+.header__info {
+  padding: 27px 0 0 57px;
+  max-width: 1336px;
+  margin: 0 auto;
+}
+
+/* Логотип */
+
+.header__logo {
+  display: flex;
+  margin-bottom: 60px;
+}
+.logo__img {
+  display: flex;
+}
+.logo__img__item {
+  width: 23px;
+  height: 34px;
+}
+.logo__title {
+  text-transform: uppercase;
+  font-family: "Golos Text", sans-serif;
+  font-size: 17px;
+  font-weight: 700;
+  align-content: center;
+  padding-left: 6px;
+  line-height: 17.98px;
+  letter-spacing: -0.3px;
+  color: #595653;
+}
+
+/* Содержание HEADER */
+
+h1 {
+  font-family: "Merriweather";
+  font-size: 60px;
+  font-weight: 400;
+  line-height: 66px;
+  text-align: left;
+  text-transform: uppercase;
+}
+.header__title__container {
+  max-width: 542px;
+  margin-bottom: 25px;
+}
+.header__title__span__item {
+  display: flex;
+}
+.header__title__span__item__center {
+  display: flex;
+  justify-content: center;
+}
+.header__title__span__item__end {
+  display: flex;
+  justify-content: end;
+}
+.support {
+  font-family: "Golos Text", sans-serif;
+  font-size: 18px;
+  font-weight: 400;
+  align-content: center;
+  color: #313131;
+  line-height: 23px;
+  text-align: center;
+  margin-bottom: 40px;
+}
+.header__title__btn {
+  display: flex;
+}
+
+.header__title__btn {
+  display: flex;
+  font-family: "Golos Text", sans-serif;
+  font-size: 16px;
+  font-weight: 500;
+  line-height: 21px;
+  justify-content: center;
+}
+.title__btn {
+  border-radius: 50px;
+  width: 263px;
+  height: 72px;
+  text-align: center;
+  align-content: center;
+}
+.support__btn {
+  color: #ffffff;
+  background-color: #1f1f1f;
+}
+.details__btn {
+  color: #1f1f1f;
+  border: 2px solid #1f1f1f;
+  margin-left: 15px;
+}
+.support__btn:hover {
+  color: #1f1f1f;
+  background-color: #fbce51;
+  transition: background-color 0.3s;
+}
+.details__btn:hover {
+  color: #ffffff;
+  background-color: #1f1f1f;
+  margin-left: 15px;
+  transition: background-color 0.3s;
+}
+.running__line {
+  background-color: #f54932;
+  padding: 16px 12px 16px 12px;
+  margin-bottom: 80px;
+}
+.running__line__p__item {
+  color: #ffffff;
+  font-family: Merriweather;
+  font-size: 22px;
+  font-weight: 400;
+  line-height: 24.2px;
+  text-align: right;
+}
+.lecture {
+  margin-bottom: 188px;
+}
+.lecture__container {
+  margin: 0 72px;
+}
+.lecture__content {
+  display: flex;
+  justify-content: space-between;
+  margin-bottom: 65px;
+}
+.play {
+  display: flex;
+  justify-content: space-between;
+}
+.play__img {
+  margin-right: 39px;
+  min-width: 478px;
+}
+.lecture__p {
+  padding-top: 28px;
+  font-family: "Merriweather";
+  font-size: 36px;
+  font-weight: 400;
+  line-height: 48.6px;
+  text-align: left;
+  text-transform: uppercase;
+}
+.play__info__p {
+  padding: 0;
+  margin-bottom: 45px;
+}
+.lecture__p__span {
+  color: #F54932;
+  font-weight: 700;
+}
+/* Таблица */
+.line {
+  border-right: 2px solid #D0D0D0;
+}
+.horizontal__line {
+  border-bottom: 2px solid #D0D0D0;
+}
+.play__info__table {
+  margin-bottom: 35px;
+}
+.font__golos__regular {
+  font-family: "Golos Text", sans-serif;
+  font-size: 20px;
+  font-weight: 400;
+  align-content: center;
+  line-height: 24px;
+  letter-spacing: -0.1px;
+  color: #595653;
+}
+.play__info__table__item {
+  padding: 13px 18px 11px 0;
+}
+.table__bold {
+  padding-right: 144px;
+  padding-left: 13px;
+  font-weight: 600;
+}
+.table__bold__span {
+  text-decoration: line-through;
+  text-decoration-color: red;
+  margin-right: 8px;
+}
+.all__a {
+  color: #3057A2;
+  letter-spacing: 0px;
+  font-size: 20px;
+  text-transform: none;
+}
+/* Таблица враппер, которая в итоге станет слайдером */
+.container__content {
+  margin: 0 72px;
+}
+.wrapper {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  grid-template-rows: 112px 112px 136px;
+  gap: 20px;
+}
+.wrapper__item {
+  background-image: url(/img/header__bg.png);
+}
+.wrapper__info {
+  font-family: "Golos Text", sans-serif;
+  font-size: 20px;
+  font-weight: 500;
+  line-height: 24px;
+  text-align: left;  
+  padding-left: 16px;
+  max-width: 446px;
+}
+.wrapper__item__container {
+  display: flex;
+  margin: 20px;
+}
+.wrapper__number {
+  background-color: #FFFFFF;
+  font-family: "Golos Text", sans-serif;
+  font-size: 20px;
+  font-weight: 600;
+  border-radius: 50%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 13px;
+  height: 36px;
+  width: 36px;
+}
+.box3 {
+  grid-column-start: 3;
+  grid-row-start: 3;
+  grid-row-end: 1;
+}
+.box7 {
+  grid-column-start: 2;
+  grid-column-end: 4;
+  grid-row-start: 3;
+  grid-row-end: 3;
+}
+.title__p {
+  font-family: "Merriweather";
+  font-size: 54px;
+  font-weight: 400;
+  line-height: 64.8px;
+  text-align: left;
+  text-transform: uppercase;
+}
+.transformation__title {
+  margin-bottom: 53px;
+}
+.transformation__span {
+  display: flex;
+}
+.transformation__span__item {
+  padding-left: 19px;
+  padding-bottom: 4px;
+}
+.airplane__img {
+  position: absolute;
+  top: 2233px;
+  right: 10px;
+}
+.transformation {
+  margin-bottom: 200px;
+}
+/* Участники */
+.btns__slider {
+  display: flex;
+}
+.counter {
+  display: flex;
+}
+.participant__content {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+.counter {
+  font-family: "Golos Text", sans-serif;
+  font-size: 16px;
+  font-weight: 400;
+}
+.counter__max {
+  color: #313131;
+}
+/* Слайдер item */
+.avatar {
+  background-image: url('/img/avatar.png');
+  height: 320px;
+  width: 320px;
+}
+.slider__item {
+  margin: 0 20px;
+  width: 394px;
+  height: 462px;
+}
+.slider__name {
+  font-family: "Golos Text", sans-serif;
+  font-size: 20px;
+  font-weight: 600;
+}
+.slider__line {
+  display: flex;
+}
