@@ -458,7 +458,7 @@ h1 {
   gap: 20px;
 }
 .wrapper__item {
-  background-image: url(/img/header__bg.png);
+  background-image: url(./img/header__bg.png);
 }
 .wrapper__info {
   font-family: "Golos Text", sans-serif;
