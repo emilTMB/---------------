@@ -83,7 +83,7 @@ li {
 
 .layercircle {
   z-index: 1;
-  background-image: url(../img/background__header/fullcircle.png);
+  background-image: url(./img/background__header/fullcircle.png);
   left: 49.3%;
   bottom: 11.7%;
   width: 660px;
@@ -92,12 +92,12 @@ li {
 
 .layerking {
   z-index: 1;
-  background-image: url(../img/background__header/king.png);
+  background-image: url(./img/background__header/king.png);
 }
 
 .layerqween {
   z-index: 1;
-  background-image: url(../img/background__header/qween.png);
+  background-image: url(./img/background__header/qween.png);
 }
 
 .layer-text {
@@ -310,7 +310,7 @@ h1 {
 .play__img__container {
   z-index: 0;
   position: relative;
-  background-image: url(../img/play__img/bg.png);
+  background-image: url(./img/play__img/bg.png);
   left: 4.9%;
   top: 6px;
   height: 453.81px;
@@ -322,7 +322,7 @@ h1 {
 }
 .evrika {
   z-index: 1;
-  background-image: url(../img/play__img/evrika.png);
+  background-image: url(./img/play__img/evrika.png);
   left: -11%;
   width: 528.99px;
   top: -51px;
@@ -331,7 +331,7 @@ h1 {
 .player1 {
   display: none;
   z-index: 2;
-  background-image: url(../img/play__img/player1.png);
+  background-image: url(./img/play__img/player1.png);
   left: 11%;
   width: 528.99px;
   top: 65px;
@@ -340,7 +340,7 @@ h1 {
 .player2 {
   display: block;
   z-index: 2;
-  background-image: url(../img/play__img/player2.png);
+  background-image: url(./img/play__img/player2.png);
   left: 3%;
   width: 528.99px;
   top: 63px;
@@ -348,7 +348,7 @@ h1 {
 }
 .hand {
   z-index: 3;
-  background-image: url(../img/play__img/hand.png);
+  background-image: url(./img/play__img/hand.png);
   left: 36%;
   width: 528.99px;
   bottom: -198px;
@@ -356,7 +356,7 @@ h1 {
 }
 .black__horse {
   z-index: 3;
-  background-image: url(../img/play__img/black__horse.png);
+  background-image: url(./img/play__img/black__horse.png);
   left: 8%;
   width: 528.99px;
   bottom: -221px;
@@ -364,7 +364,7 @@ h1 {
 }
 .horse__evrika {
   z-index: 2;
-  background-image: url(../img/play__img/horse__evrika.png);
+  background-image: url(./img/play__img/horse__evrika.png);
   left: -8%;
   width: 528.99px;
   bottom: -166px;
@@ -375,7 +375,7 @@ h1 {
   left: 0%;
   top: 6%;
   mix-blend-mode: color-burn;
-  background-image: url(../img/background__header/mask.png);
+  background-image: url(./img/background__header/mask.png);
   height: 426px;
   width: 405px;
 }
