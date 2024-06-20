@@ -98,3 +98,40 @@ function handleSlider() {
   
   // вызов функции при изменении размера экрана
   window.addEventListener('resize', handleSlider);
+
+  
+  // АНИМАЦИЯ
+  function animateHand() {
+    const hand = document.querySelector('.play__img__item.hand');
+    const blackHorse = document.querySelector('.play__img__item.black__horse');
+    const horseEvrika = document.querySelector('.play__img__item.horse__evrika');
+    const evrika = document.querySelector('.play__img__item.evrika');
+    const player1 = document.querySelector('.play__img__item.player1');
+    const player2 = document.querySelector('.play__img__item.player2');
+    
+    evrika.style.display = 'none';
+    horseEvrika.style.display = 'none';
+    player1.style.display = 'none';
+    blackHorse.style.display = 'none';
+    player2.style.display = 'block';
+
+    hand.style.transform = '';
+    blackHorse.style.transform = '';
+  
+    hand.style.transform = 'translateY(-10px) rotate(30deg)';
+    // blackHorse.style.transform = 'translateY(-10px) rotate(-30deg)';
+  
+    setTimeout(() => {
+      evrika.style.display = 'block';
+      horseEvrika.style.display = 'block';
+      player1.style.display = 'block';
+      player2.style.display = 'none';
+      blackHorse.style.display = 'block';
+      hand.style.transform = '';
+      // blackHorse.style.transform = '';
+    }, 1000);
+  
+    setTimeout(animateHand, 2000);
+  }
+  
+  animateHand();

@@ -306,6 +306,92 @@ h1 {
   margin-right: 39px;
   min-width: 478px;
 }
+/* Эврика */
+.play__img__container {
+  z-index: 0;
+  position: relative;
+  background-image: url(../img/play__img/bg.png);
+  left: 4.9%;
+  top: 6px;
+  height: 453.81px;
+  background-repeat: no-repeat;
+}
+.play__img__item {
+  position: absolute;
+  background-repeat: no-repeat;
+}
+.evrika {
+  z-index: 1;
+  background-image: url(../img/play__img/evrika.png);
+  left: -11%;
+  width: 528.99px;
+  top: -51px;
+  height: 343.81px;
+}
+.player1 {
+  display: none;
+  z-index: 2;
+  background-image: url(../img/play__img/player1.png);
+  left: 11%;
+  width: 528.99px;
+  top: 65px;
+  height: 343.81px;
+}
+.player2 {
+  display: block;
+  z-index: 2;
+  background-image: url(../img/play__img/player2.png);
+  left: 3%;
+  width: 528.99px;
+  top: 63px;
+  height: 343.81px;
+}
+.hand {
+  z-index: 3;
+  background-image: url(../img/play__img/hand.png);
+  left: 36%;
+  width: 528.99px;
+  bottom: -198px;
+  height: 343.81px;
+}
+.black__horse {
+  z-index: 3;
+  background-image: url(../img/play__img/black__horse.png);
+  left: 8%;
+  width: 528.99px;
+  bottom: -221px;
+  height: 343.81px;
+}
+.horse__evrika {
+  z-index: 2;
+  background-image: url(../img/play__img/horse__evrika.png);
+  left: -8%;
+  width: 528.99px;
+  bottom: -166px;
+  height: 343.81px;
+}
+.mask {
+  z-index: 2;
+  left: 0%;
+  top: 6%;
+  mix-blend-mode: color-burn;
+  background-image: url(../img/background__header/mask.png);
+  height: 426px;
+  width: 405px;
+}
+.play__img__item.hand {
+  transition: transform 0.3s ease;
+}
+
+.play__img__item.black__horse {
+  transition: transform 0.3s ease;
+}
+
+.play__img__item.horse__evrika,
+.play__img__item.player1 {
+  display: none;
+}
+/* //////////////////// */
 .lecture__p {
   padding-top: 28px;
   font-family: "Merriweather";
