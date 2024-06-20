@@ -548,7 +548,7 @@ h1 {
 }
 /* Слайдер item */
 .avatar {
-  background-image: url("/img/avatar.png");
+  background-image: url("img/avatar.png");
   height: 320px;
   width: 320px;
   margin-bottom: 28px;
