@@ -43,18 +43,120 @@ a {
 /* HEADER */
 
 header {
-  background-image: url(/img/header__bg.png);
+  mix-blend-mode: color-burn;
+  background-image: url(./img/header__bg.png);
+}
+li {
+  list-style-type: none;
 }
 .header__container {
+  position: relative;
   align-items: center;
   height: 700px;
-  background-image: url(/img/header__bg__content.png);
   background-position: center;
 }
 .header__info {
-  padding: 27px 0 0 57px;
+  padding: 27px 0 0 72px;
   max-width: 1336px;
   margin: 0 auto;
+  position: absolute;
+  top: 0px;
+  z-index: 6;
+  width: 100%;
+}
+.header__background__container {
+  position: relative;
+  overflow: hidden;
+  min-height: 700px;
+  background-color: #e9ded4;
+  padding: 0;
+  margin: 0;
+}
+
+.header__background__item {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  background-position: center;
+  background-repeat: no-repeat;
+}
+
+.layercircle {
+  z-index: 1;
+  background-image: url(../img/background__header/fullcircle.png);
+  left: 49.3%;
+  bottom: 11.7%;
+  width: 660px;
+  height: 660px;
+}
+
+.layerking {
+  z-index: 1;
+  background-image: url(../img/background__header/king.png);
+}
+
+.layerqween {
+  z-index: 1;
+  background-image: url(../img/background__header/qween.png);
+}
+
+.layer-text {
+  z-index: 2;
+  left: 49.3%;
+  bottom: 11.7%;
+  width: 661px;
+  height: 661px;
+  mix-blend-mode: overlay;
+  animation: rotateZ 30s linear infinite;
+  background-image: url(./img/background__header/Group2big.png);
+}
+
+.layercity {
+  z-index: 3;
+  background-image: url(./img/background__header/1920-layer2restored.png);
+}
+
+.layer-mask {
+  z-index: 4;
+  mix-blend-mode: color-burn;
+  background-image: url(./img/background__header/mask.png);
+}
+
+.layerhorse {
+  z-index: 5;
+  background-image: url(./img/background__header/horse.png);
+}
+
+.layerpawn {
+  z-index: 5;
+  background-image: url(./img/background__header/pawn.png);
+}
+@keyframes rotateZ {
+  from {
+    transform: rotateZ(0deg);
+  }
+  to {
+    transform: rotateZ(360deg);
+  }
+}
+.layerhorse,
+.layerpawn,
+.layerking,
+.layerqween {
+  transition: transform 0.3s ease;
+}
+
+header:hover .layerhorse {
+  transform: translateY(100px) translateX(-100px) rotate(-30deg);
+}
+
+header:hover .layerpawn {
+  transform: translateY(-300px) translateX(200px) rotate(30deg);
+}
+
+header:hover .layerking,
+header:hover .layerqween {
+  transform: translateY(-10px);
 }
 
 /* Логотип */
@@ -158,16 +260,32 @@ h1 {
 }
 .running__line {
   background-color: #f54932;
-  padding: 16px 12px 16px 12px;
+  padding: 16px 12px 44px 12px;
   margin-bottom: 80px;
+  overflow: hidden;
+  position: relative;
+  height: 44px; /* установите высоту равной высоте текста */
 }
+
 .running__line__p__item {
   color: #ffffff;
   font-family: Merriweather;
   font-size: 22px;
   font-weight: 400;
   line-height: 24.2px;
-  text-align: right;
+  position: absolute;
+  white-space: nowrap;
+  padding-left: 100%;
+  animation: running-text 10s linear infinite;
+}
+
+@keyframes running-text {
+  0% {
+    transform: translateX(0);
+  }
+  100% {
+    transform: translateX(-100%);
+  }
 }
 .lecture {
   margin-bottom: 188px;
@@ -202,15 +320,15 @@ h1 {
   margin-bottom: 45px;
 }
 .lecture__p__span {
-  color: #F54932;
+  color: #f54932;
   font-weight: 700;
 }
 /* Таблица */
 .line {
-  border-right: 2px solid #D0D0D0;
+  border-right: 2px solid #d0d0d0;
 }
 .horizontal__line {
-  border-bottom: 2px solid #D0D0D0;
+  border-bottom: 2px solid #d0d0d0;
 }
 .play__info__table {
   margin-bottom: 35px;
@@ -238,7 +356,7 @@ h1 {
   margin-right: 8px;
 }
 .all__a {
-  color: #3057A2;
+  color: #3057a2;
   letter-spacing: 0px;
   font-size: 20px;
   text-transform: none;
@@ -261,7 +379,7 @@ h1 {
   font-size: 20px;
   font-weight: 500;
   line-height: 24px;
-  text-align: left;  
+  text-align: left;
   padding-left: 16px;
   max-width: 446px;
 }
@@ -270,7 +388,7 @@ h1 {
   margin: 20px;
 }
 .wrapper__number {
-  background-color: #FFFFFF;
+  background-color: #ffffff;
   font-family: "Golos Text", sans-serif;
   font-size: 20px;
   font-weight: 600;
@@ -322,39 +440,102 @@ h1 {
 /* Участники */
 .btns__slider {
   display: flex;
+  align-items: center;
 }
 .counter {
   display: flex;
+  margin: 0px 17px;
+  font-family: "Golos Text", sans-serif;
+  font-size: 18px;
+  font-weight: 400;
+  line-height: 19.2px;
+  color: #313131;
 }
 .participant__content {
   display: flex;
   justify-content: space-between;
   align-items: center;
-}
-.counter {
-  font-family: "Golos Text", sans-serif;
-  font-size: 16px;
-  font-weight: 400;
+  margin-bottom: 61px;
 }
 .counter__max {
-  color: #313131;
+  opacity: 60%;
 }
 /* Слайдер item */
 .avatar {
-  background-image: url('/img/avatar.png');
+  background-image: url("/img/avatar.png");
   height: 320px;
   width: 320px;
+  margin-bottom: 28px;
+}
+.container__slider {
+  overflow: hidden;
+  margin: 0 auto;
 }
 .slider__item {
-  margin: 0 20px;
+  display: flex;
+  text-align: center;
+  margin-right: 20px;
   width: 394px;
-  height: 462px;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
 }
 .slider__name {
   font-family: "Golos Text", sans-serif;
-  font-size: 20px;
+  font-size: 24px;
   font-weight: 600;
+  margin-bottom: 6px;
 }
 .slider__line {
   display: flex;
+  position: relative;
+  width: 2484px;
+  left: 0;
+  transition: all ease 1s;
+}
+.btn__back,
+.btn__next {
+  text-align: center;
+  width: 44px;
+  height: 44px;
+  background-color: #313131;
+  border: none;
+  border-radius: 40px;
+}
+.btn__back:hover,
+.btn__next:hover {
+  transition: 0.3s;
+  background-color: #fbce51;
+}
+.anchor {
+  padding-top: 21px;
+}
+.slider__item__a {
+  text-decoration: none;
+  border: 1px solid #3057a2;
+  padding: 7px 11px;
+  font-size: 17px;
+  font-weight: 500;
+  border-radius: 62px;
+  line-height: 34px;
+}
+.slider__item__a:hover {
+  color: #ffffff;
+  background-color: #3057a2;
+  transition: 0.3s;
+}
+.participant {
+  margin-bottom: 140px;
+}
+.running__line__footer {
+  margin-bottom: 0;
+}
+footer {
+  padding-top: 42px;
+  height: 150px;
+  background-color: #e9ded4;
+  font-family: "Golos Text", sans-serif;
+  font-size: 16px;
+  font-weight: 400;
+  line-height: 19.2px;
 }

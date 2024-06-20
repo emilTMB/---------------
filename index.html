@@ -22,6 +22,16 @@
     <header>
       <div class="container">
         <div class="header__container">
+            <ul class="header__background__container">
+              <li class="header__background__item layercircle"></li>
+              <li class="header__background__item layer-text"></li>
+              <li class="header__background__item layerking"></li>
+              <li class="header__background__item layerqween"></li>
+              <li class="header__background__item layercity"></li>
+              <li class="header__background__item layer-mask"></li>
+              <li class="header__background__item layerhorse"></li>
+              <li class="header__background__item layerpawn"></li>
+            </ul>
           <div class="header__info">
             <div class="header__logo">
               <div class="logo__img">
@@ -54,11 +64,10 @@
             </div>
           </div>
         </div>
+
       </div>
       <div class="running__line">
-        <marquee behavior="scroll" direction="left" class=" running__line__p">
-          <p class="running__line__p__item">Дело помощи утопающим — дело рук самих утопающих! &bull; Шахматы двигают вперед не только культуру, но и экономику! &bull; Лед тронулся, господа присяжные заседатели! &bull; </p>
-        </marquee>
+        <p class="running__line__p__item">Дело помощи утопающим — дело рук самих утопающих! &bull; Шахматы двигают вперед не только культуру, но и экономику! &bull; Лед тронулся, господа присяжные заседатели! &bull;</p>
       </div>
     </header>
     
@@ -195,12 +204,22 @@
             <p class="participant__p title__p">Участники турнира</p>
           </div>
           <div class="btns__slider">
-            <button class="btn__next"></button>
+            <button class="btn__back">
+              <svg class="slider-svg" width="12" height="20" viewBox="0 0 12 20" fill="none" xmlns="http://www.w3.org/2000/svg">
+                <path d="M10.5382 18.4615L2.07666 9.99995L10.5382 1.53841" stroke="white" stroke-width="2" 
+                stroke-linecap="square"/>
+                </svg>    
+            </button>
             <div class="counter">
-              <div class="counter__current">1</div>
+              <span class="counter__current">1</span>
               <div class="counter__max">/6</div>
             </div>
-            <button class="btn__back"></button>
+            <button class="btn__next">
+              <svg class="slider-svg" width="12" height="20" viewBox="0 0 12 20" fill="none" xmlns="http://www.w3.org/2000/svg">
+                <path d="M1.4618 1.53839L9.92334 9.99993L1.4618 18.4615" stroke="white" stroke-width="2" 
+                stroke-linecap="square"/>
+              </svg> 
+            </button>
           </div>
         </div>
         <div class="container__slider container__content">
@@ -209,48 +228,76 @@
               <div class="avatar"></div>
               <div class="container__slider__info">
                 <div class="slider__name">Хозе-Рауль Капабланка</div>
-                <div class="slider__info">222222222222</div>
+                <div class="slider__info font__golos__regular">Чемпион мира по шахматам</div>
+                <div class="anchor">
+                  <a class="slider__item__a all__a " href="#">Подробнее</a>
+                </div>
               </div>
             </div>
             <div class="slider__item">
               <div class="avatar"></div>
               <div class="container__slider__info">
-                <div class="slider__name">Хозе-Рауль Капабланка</div>
-                <div class="slider__info">222222222222</div>
+                <div class="slider__name">Эммануил Ласкер</div>
+                <div class="slider__info font__golos__regular">Чемпион мира по шахматам</div>
+                <div class="anchor">
+                  <a class="slider__item__a all__a " href="#">Подробнее</a>
+                </div>
               </div>
             </div>
             <div class="slider__item">
               <div class="avatar"></div>
               <div class="container__slider__info">
-                <div class="slider__name">Хозе-Рауль Капабланка</div>
-                <div class="slider__info">222222222222</div>
+                <div class="slider__name">Александр Алехин</div>
+                <div class="slider__info font__golos__regular">Чемпион мира по шахматам</div>
+                <div class="anchor">
+                  <a class="slider__item__a all__a " href="#">Подробнее</a>
+                </div>
               </div>
             </div>
             <div class="slider__item">
               <div class="avatar"></div>
               <div class="container__slider__info">
-                <div class="slider__name">Хозе-Рауль Капабланка</div>
-                <div class="slider__info">222222222222</div>
+                <div class="slider__name">Арон Нимцович</div>
+                <div class="slider__info font__golos__regular">Чемпион мира по шахматам</div>
+                <div class="anchor">
+                  <a class="slider__item__a all__a " href="#">Подробнее</a>
+                </div>
               </div>
             </div>
             <div class="slider__item">
               <div class="avatar"></div>
               <div class="container__slider__info">
-                <div class="slider__name">Хозе-Рауль Капабланка</div>
-                <div class="slider__info">222222222222</div>
+                <div class="slider__name">Рихард Рети</div>
+                <div class="slider__info font__golos__regular">Чемпион мира по шахматам</div>
+                <div class="anchor">
+                  <a class="slider__item__a all__a " href="#">Подробнее</a>
+                </div>
               </div>
             </div>
             <div class="slider__item">
               <div class="avatar"></div>
               <div class="container__slider__info">
-                <div class="slider__name">Хозе-Рауль Капабланка</div>
-                <div class="slider__info">222222222222</div>
+                <div class="slider__name">Остап Бендер</div>
+                <div class="slider__info font__golos__regular">Гроссмейстер</div>
+                <div class="anchor">
+                  <a class="slider__item__a all__a " href="#">Подробнее</a>
+                </div>
               </div>
             </div>
           </div>
         </div>
       </div>
     </section>
+    <div class="running__line running__line__footer">
+      <p class="running__line__p__item">Дело помощи утопающим — дело рук самих утопающих! &bull; Шахматы двигают вперед не только культуру, но и экономику! &bull; Лед тронулся, господа присяжные заседатели! &bull;</p>
+    </div>
+    <footer>
+      <div class="container">
+        <div class="container__content">
+          <p class=" footer__text">Все персонажи, события и цитаты являются вымышленными и не принадлежат создателям сайта. С подробностями можно познакомиться в главе XXXIV романа Ильи Ильфа и Евгения Петрова «Двенадцать стульев».</p>
+        </div>
+      </div>
+    </footer>
     <script src="/main.js"></script>
   </body>
 </html>
