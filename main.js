@@ -169,7 +169,7 @@ function handleSlider() {
     document.querySelector ('.btn__back__mobile').addEventListener('click', function () {
       offset = offset - 355;
       if (offset < 0) {
-        offset = 1675;
+        offset = 1775;
         count = 6;
       } else {
         count = count - 1;
