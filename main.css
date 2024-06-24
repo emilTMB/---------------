@@ -972,6 +972,9 @@ footer {
     .footer__text__item {
     display: block;
     }
+    .container__content {
+      margin: 0 20px;
+    }
 }
 @media (max-width: 375px) {
   .layerking {
@@ -1164,9 +1167,6 @@ footer {
     font-size: 36px;
     line-height: 39.6px;
   }
-  .container__content {
-    margin: 0 20px;
-  }
   .lecture {
     margin-bottom: 118px;
   }
@@ -1251,7 +1251,6 @@ footer {
   .participant {
     margin-bottom: 102px;
   }
-  /* //////////////// */
   .wrapper__line {
     display: flex;
     position: relative;
@@ -1261,12 +1260,6 @@ footer {
   .container__content {
     overflow: hidden;
   }
-  /* .wrapper {
-    display: flex;
-    margin: 0 auto;
-    position: relative;
-    margin-bottom: 25px;
-  } */
   .wrapper__group1,
   .wrapper__group2 {
     background-image: url(./img/header__bg.png);
