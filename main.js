@@ -2,6 +2,7 @@ function handleSlider() {
   let offset = 0;
   let offset__mobile = 0;
   let count = 0;
+  let paginating = 0;
   const sliderLine = document.querySelector ('.slider__line');
   const containerSlider = document.querySelector ('.container__slider');
   const countSpan = document.querySelector ('.counter__current');
@@ -66,94 +67,100 @@ function handleSlider() {
       countSpan.innerHTML = `${count}`;
     });
   } else if (window.matchMedia('(max-width: 848px)').matches) {
-    count = 1;
-    countSpan.innerHTML = `${count}`;
+    paginating = 1;
     containerSlider.style.width = 335 + 'px';
-
+    count = 1;
     document.querySelector ('.btn__next__transform').addEventListener('click', function () {
       offset__mobile = offset__mobile + 375;
       if (offset__mobile > 1500) {
         offset__mobile = 1500;
-        count = 5;
+        paginating = 5;
       } else {
-        count = count + 1;
+        paginating = paginating + 1;
       }
       wrapperLine.style.left = -offset__mobile + 'px';
-
-      if (count == 1) {
+      if (paginating == 1) {
         document.querySelector ('.btn__back__transform').classList.add('disabled');
-      } else if (count > 1) {
+      } else if (paginating > 1) {
         document.querySelector ('.btn__back__transform').classList.remove('disabled');
       }
-      if (count == 1) {
+      if (paginating == 5) {
+        document.querySelector ('.btn__next__transform').classList.add('disabled');
+      } else if (paginating <=  5) {
+        document.querySelector ('.btn__next__transform').classList.remove('disabled');
+      }
+      if (paginating == 1) {
         document.querySelector ('.pagination__li__one').classList.add('active');
       } else {
         document.querySelector ('.pagination__li__one').classList.remove('active');
       }
-      if (count == 2) {
+      if (paginating == 2) {
         document.querySelector ('.pagination__li__two').classList.add('active');
       } else {
         document.querySelector ('.pagination__li__two').classList.remove('active');
       }
-      if (count == 3) {
+      if (paginating == 3) {
         document.querySelector ('.pagination__li__three').classList.add('active');
       } else {
         document.querySelector ('.pagination__li__three').classList.remove('active');
       }
-      if (count == 4) {
+      if (paginating == 4) {
         document.querySelector ('.pagination__li__four').classList.add('active');
       } else {
         document.querySelector ('.pagination__li__four').classList.remove('active');
       }
-      if (count == 5) {
+      if (paginating == 5) {
         document.querySelector ('.pagination__li__five').classList.add('active');
       } else {
         document.querySelector ('.pagination__li__five').classList.remove('active');
       }
+      console.log(paginating)
     });
 
     document.querySelector ('.btn__back__transform').addEventListener('click', function () {
       offset__mobile = offset__mobile - 375;
       if (offset__mobile < 0) {
         offset__mobile = 0;
-        count = 1;
+        paginating = 1;
       } else {
-        count = count - 1;
+        paginating = paginating - 1;
       }
       wrapperLine.style.left = -offset__mobile + 'px';
-      console.log(count)
-      if (count == 1) {
+      if (paginating == 1) {
         document.querySelector ('.btn__back__transform').classList.add('disabled');
-      } else if (count > 1) {
+      } else if (paginating > 1) {
         document.querySelector ('.btn__back__transform').classList.remove('disabled');
       }
-      if (count == 1) {
+      if (paginating <= 5) {
+        document.querySelector ('.btn__next__transform').classList.remove('disabled');
+      }
+      if (paginating == 1) {
         document.querySelector ('.pagination__li__one').classList.add('active');
       } else {
         document.querySelector ('.pagination__li__one').classList.remove('active');
       }
-      if (count == 2) {
+      if (paginating == 2) {
         document.querySelector ('.pagination__li__two').classList.add('active');
       } else {
         document.querySelector ('.pagination__li__two').classList.remove('active');
       }
-      if (count == 3) {
+      if (paginating == 3) {
         document.querySelector ('.pagination__li__three').classList.add('active');
       } else {
         document.querySelector ('.pagination__li__three').classList.remove('active');
       }
-      if (count == 4) {
+      if (paginating == 4) {
         document.querySelector ('.pagination__li__four').classList.add('active');
       } else {
         document.querySelector ('.pagination__li__four').classList.remove('active');
       }
-      if (count == 5) {
+      if (paginating == 5) {
         document.querySelector ('.pagination__li__five').classList.add('active');
       } else {
         document.querySelector ('.pagination__li__five').classList.remove('active');
       }
+      console.log(paginating)
     });
-    if (count == 1)
       document.querySelector ('.btn__next__mobile').addEventListener('click', function () {
         offset = offset + 355;
         if (offset > 1775) {
@@ -164,6 +171,7 @@ function handleSlider() {
         }
         sliderLine.style.left = -offset + 'px';
         countSpanMobile.innerHTML = `${count}`;
+        console.log(count)
       });
 
     document.querySelector ('.btn__back__mobile').addEventListener('click', function () {
@@ -176,6 +184,7 @@ function handleSlider() {
       }
       sliderLine.style.left = -offset + 'px';
       countSpanMobile.innerHTML = `${count}`;
+      console.log(count)
     });
   }
 }

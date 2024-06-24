@@ -1262,6 +1262,7 @@ footer {
   }
   .wrapper__group1,
   .wrapper__group2 {
+    width: 335px;
     background-image: url(./img/header__bg.png);
     display: block;
   }
