@@ -156,7 +156,7 @@ function handleSlider() {
     if (count == 1)
       document.querySelector ('.btn__next__mobile').addEventListener('click', function () {
         offset = offset + 355;
-        if (offset > 1675) {
+        if (offset > 1775) {
           offset = 0;
           count = 1;
         } else {
